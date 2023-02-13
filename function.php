@@ -18,6 +18,9 @@ if (isEven($number)) { //arguments
 //factorial number
 function factorial($number)
 {
+    if (gettype($number) != "integer") {
+        return "Invalid";
+    }
     $result = 1;
     for ($i = $number; $i > 1; $i--) {
         $result = $result * $i;
@@ -25,6 +28,6 @@ function factorial($number)
     return $result;
 }
 
-$number = 5;
+$number = 'sadsad';
 echo PHP_EOL;
 echo "Factorial of {$number} is " . factorial($number);
