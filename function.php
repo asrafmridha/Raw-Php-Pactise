@@ -14,3 +14,17 @@ if (isEven($number)) { //arguments
 } else {
     echo "{$number} is odd number";
 }
+
+//factorial number
+function factorial($number)
+{
+    $result = 1;
+    for ($i = $number; $i > 1; $i--) {
+        $result = $result * $i;
+    }
+    return $result;
+}
+
+$number = 5;
+echo PHP_EOL;
+echo "Factorial of {$number} is " . factorial($number);
