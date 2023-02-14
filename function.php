@@ -31,3 +31,19 @@ function factorial($number)
 $number = 'sadsad';
 echo PHP_EOL;
 echo "Factorial of {$number} is " . factorial($number);
+
+//Recursive Function
+echo PHP_EOL;
+function display($number)
+{
+    if ($number == 10) {
+        return;
+    }
+    if ($number > 5) {
+        echo "The number is {$number}";
+        echo PHP_EOL;
+    }
+    display($number + 1);
+}
+
+display(2);
