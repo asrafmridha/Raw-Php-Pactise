@@ -67,3 +67,11 @@ print_r($keys);
 foreach ($foods as $food) {
     echo $food;
 }
+
+echo PHP_EOL;
+$vegetables = 'Broccoli, Cucumber, Capsicum, Tomato';
+//make a string to array
+$make_array = explode(', ', $vegetables);
+// make a array to string 
+$make_string = join(', ', $make_array);
+
