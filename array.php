@@ -43,3 +43,27 @@ foreach ($students as $student) {
 // array_push() এ্যারের শেষে নতুন ডাটা এন্ট্রি করার জন্য
 // array_push();
 // array_push($students,"priynka");
+
+// Associative Array 
+
+$foods = [
+    'vegetables' => 'Broccoli, Cucumber ,Capsicum, Tomato',
+    'fruits'    => 'banana, apple, orange',
+    'drinks'    => 'water, milk',
+];
+
+// access Associative array
+echo $foods['fruits'];
+
+// array_keys is a buid in function for get array key 
+
+$keys = array_keys($foods);
+
+//  print_r() use for print a array
+
+print_r($keys);
+
+// loop for Associative array its use foreach
+foreach ($foods as $food) {
+    echo $food;
+}
