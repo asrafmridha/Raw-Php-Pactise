@@ -102,6 +102,28 @@ $serialize = serialize($Teacher);
 echo $serialize . PHP_EOL;
 
 $json_encode = json_encode($Teacher);
-$json_decode = json_decode($json_encode,true);
+$json_decode = json_decode($json_encode, true);
 echo $json_encode;
 print_r($json_decode);
+
+// isset ফাংশনের ব্যবহার
+
+$name = 'A';
+
+if (isset($name)) {
+    echo "Name is set";
+} else {
+    echo 'name is not set';
+}
+echo PHP_EOL;
+if (empty($name)) {
+    echo "Name is Empty";
+} else {
+    echo "Name is not Empty";
+}
+echo PHP_EOL;
+if (isset($name) && (is_numeric($name) || $name != '')) {
+    echo "Name is set and it's not empty";
+} else {
+    echo "Name is either not set or it's empty";
+}
