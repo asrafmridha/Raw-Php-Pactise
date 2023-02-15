@@ -75,3 +75,13 @@ $make_array = explode(', ', $vegetables);
 // make a array to string 
 $make_string = join(', ', $make_array);
 
+// Multidimensional Arrays
+$sample = [
+    [1, 2, 3, 4],
+    [11, 22, 33, 44],
+    [111, 222, 333, 444],
+    [1111, 2222, 3333, 4444],
+    [11111, 22222, 33333, 44444, [5, 6, 7],[1,2,3,4]],
+];
+
+print_r($sample[4]);
