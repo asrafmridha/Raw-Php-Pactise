@@ -81,7 +81,27 @@ $sample = [
     [11, 22, 33, 44],
     [111, 222, 333, 444],
     [1111, 2222, 3333, 4444],
-    [11111, 22222, 33333, 44444, [5, 6, 7],[1,2,3,4]],
+    [11111, 22222, 33333, 44444, [5, 6, 7], [1, 2, 3, 4]],
 ];
 
 print_r($sample[4]);
+
+//Associative array to string conversion Json
+
+$Teacher = [
+    'name' => "Tahmina",
+    'age' => 26,
+    'class' => 8,
+    'section' => 'B',
+    'gender' => 'female',
+];
+print_r($Teacher);
+echo $Teacher['name'];
+//serialize for php
+$serialize = serialize($Teacher);
+echo $serialize . PHP_EOL;
+
+$json_encode = json_encode($Teacher);
+$json_decode = json_decode($json_encode,true);
+echo $json_encode;
+print_r($json_decode);
