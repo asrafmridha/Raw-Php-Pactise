@@ -148,9 +148,28 @@ if (in_array($n = 53, $numbers, true)) {
 echo PHP_EOL;
 // array position search 
 $position = array_search($n, $numbers);
-echo $position;
+echo "Poition is:" . $position . PHP_EOL;
 
 //key exist
 if (key_exists($name = 'name', $Teacher)) {
     echo "{$name} is exist";
 }
+echo PHP_EOL;
+
+// For Square 
+$numbers = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+$count = count($numbers);
+for ($i = 0; $i < $count; $i++) {
+    $square = $numbers[$i] * $numbers[$i];
+    echo "Square of $numbers[$i] is " . $square . PHP_EOL;
+}
+
+// or function
+
+function square($numbers)
+{
+    printf("Square of {$numbers} is %d", $numbers * $numbers);
+    echo PHP_EOL;
+}
+
+array_walk($numbers, 'square');
