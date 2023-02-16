@@ -127,3 +127,30 @@ if (isset($name) && (is_numeric($name) || $name != '')) {
 } else {
     echo "Name is either not set or it's empty";
 }
+
+// Searching in Indexed and Associated Arrays
+
+$Teacher = [
+    'name' => "Tahmina",
+    'age' => 26,
+    'class' => 8,
+    'section' => 'B',
+    'gender' => 'female',
+];
+echo PHP_EOL;
+$numbers = array(1, 7, 3, 11, 53, 27);
+
+//is exist value in array
+if (in_array($n = 53, $numbers, true)) {
+    echo "{$n} is found";
+    global $n;
+}
+echo PHP_EOL;
+// array position search 
+$position = array_search($n, $numbers);
+echo $position;
+
+//key exist
+if (key_exists($name = 'name', $Teacher)) {
+    echo "{$name} is exist";
+}
