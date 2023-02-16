@@ -172,4 +172,13 @@ function square($numbers)
     echo PHP_EOL;
 }
 
-array_walk($numbers, 'square');
+function cube($numbers)
+{
+    return $numbers * $numbers * $numbers;
+}
+
+array_walk($numbers, 'square') . PHP_EOL;
+
+$array_map = array_map('cube', $numbers);
+print_r($array_map);
+
