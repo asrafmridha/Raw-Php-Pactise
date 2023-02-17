@@ -189,5 +189,14 @@ function plus($oldValue, $newValue)
     $plus = $oldValue + $newValue;
     return $plus;
 }
- 
-echo array_reduce($numbers,'plus');
+
+echo array_reduce($numbers, 'plus') . PHP_EOL;
+
+// Accessing characters within a string
+
+$string = "Hello World";
+
+echo $string[0] . PHP_EOL;
+echo $string[-1] . PHP_EOL;
+echo substr($string, 1, 4);
+echo substr($string, -3,2);
