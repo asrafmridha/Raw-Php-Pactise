@@ -182,3 +182,12 @@ array_walk($numbers, 'square') . PHP_EOL;
 $array_map = array_map('cube', $numbers);
 print_r($array_map);
 
+//array reduce function
+
+function plus($oldValue, $newValue)
+{
+    $plus = $oldValue + $newValue;
+    return $plus;
+}
+ 
+echo array_reduce($numbers,'plus');
