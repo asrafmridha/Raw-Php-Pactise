@@ -200,3 +200,15 @@ echo $string[0] . PHP_EOL;
 echo $string[-1] . PHP_EOL;
 echo substr($string, 1, 4);
 echo substr($string, -3,2);
+
+for($i=0;$i<strlen($string);$i++){
+    echo $string[$i];
+}
+
+for ($i = strlen($string); $i>=0; $i--) {
+    echo $string[$i];
+}
+
+
+
+
