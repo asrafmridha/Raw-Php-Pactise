@@ -32,7 +32,7 @@ class Human
     $this->name = $pesonName;
     $this->age  = $personAge;
   }
-  
+
   // Methods
   function SayIdentity()
   {
@@ -45,6 +45,38 @@ class Human
 }
 
 $human = new Human('Tahmina');
-$human2 = new  Human("Priyanka",23);
+$human2 = new  Human("Priyanka", 23);
 $human->SayIdentity();
 $human2->SayIdentity();
+
+
+class Fund
+{
+  private $fund;
+
+  function __construct($initialFund = 0)
+  {
+    $this->fund = $initialFund;
+  }
+  public function addFund($money)
+  {
+    $this->fund += $money;
+  }
+  public function deductFund($money)
+  {
+    $this->fund -= $money;
+  }
+
+  public function getTotalFund()
+  {
+    echo "Total Fund is {$this->fund}";
+  }
+}
+
+$ourFund = new Fund(100);
+
+$ourFund->addFund(100);
+// echo $ourFund->fund.PHP_EOL;
+$ourFund->deductFund(40);
+// echo $ourFund->fund;
+$ourFund->getTotalFund();
