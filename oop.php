@@ -69,7 +69,7 @@ class Fund
 
   public function getTotalFund()
   {
-    echo "Total Fund is {$this->fund}";
+    echo "Total Fund is {$this->fund}\n";
   }
 }
 
@@ -80,3 +80,22 @@ $ourFund->addFund(100);
 $ourFund->deductFund(40);
 // echo $ourFund->fund;
 $ourFund->getTotalFund();
+
+abstract class ourClass
+{
+  function sayHi()
+  {
+    echo "Hi";
+  }
+  abstract function eat();
+}
+
+class myClass extends ourClass
+{
+  function eat()
+  {
+    echo "Hlw I am eating";
+  }
+}
+$myClass = new myClass();
+$myClass->eat();
