@@ -99,3 +99,18 @@ class myClass extends ourClass
 }
 $myClass = new myClass();
 $myClass->eat();
+
+abstract class newClass
+{
+   final function sayHi()
+  {
+    echo "Doing Something";
+  }
+}
+class newClass2 extends newClass
+{
+
+}
+
+$cc = new newClass2();
+$cc->sayHi();
