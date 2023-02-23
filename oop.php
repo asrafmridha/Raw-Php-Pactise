@@ -202,3 +202,38 @@ echo "\n";
 $student = new Student("Asraf", 32);
 echo $student->name;
 echo $student->age;
+
+
+class DistrtCollection implements IteratorAggregate
+{
+  private $districts;
+
+  public function __construct()
+  {
+    $this->districts = array();
+  }
+  function addDistrict($district)
+  {
+    array_push($this->districts, $district);
+  }
+
+  // function allDistrict()
+  // {
+  //   return $this->districts;
+  // }
+
+  function getIterator(): Traversable
+  {
+    return new ArrayIterator($this->districts);
+  }
+}
+
+$district = new DistrtCollection();
+$district->addDistrict("Bogura");
+$district->addDistrict("Rajbari");
+$district->addDistrict("Kushtia");
+
+// $allDistrict = $district->allDistrict();
+foreach ($district as $district) {
+  echo $district . PHP_EOL;
+}
