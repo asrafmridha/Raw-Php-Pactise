@@ -174,3 +174,31 @@ class greeting
 }
 // Call static method
 greeting::welcome(7);
+
+class Student
+{
+  private $name;
+  private $age;
+  private $class;
+
+  function __construct($name = '', $age = '', $class = '')
+  {
+    $this->name   = $name;
+    $this->age    = $age;
+    $this->class  = $class;
+  }
+
+  function __get($prop)
+  {
+    return $this->$prop;
+  }
+
+  function __set($prop, $value)
+  {
+    $this->$prop = $value;
+  }
+}
+echo "\n";
+$student = new Student("Asraf", 32);
+echo $student->name;
+echo $student->age;
