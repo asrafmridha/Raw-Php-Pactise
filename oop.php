@@ -118,7 +118,6 @@ $cc->sayHi();
 interface Animal
 {
   public function makeSound();
-  
 }
 
 // Class definitions
@@ -156,3 +155,22 @@ $animals = array($cat, $dog, $mouse);
 foreach ($animals as $animal) {
   $animal->makeSound();
 }
+
+//Static methods and properties of classes
+class greeting
+{
+  static $number;
+  public static function welcome($number)
+  {
+    echo self::$number = $number . "\n";
+    echo "Hello World!\n";
+    self::doSomething();
+  }
+
+  static function doSomething()
+  {
+    echo "I am doing Something";
+  }
+}
+// Call static method
+greeting::welcome(7);
