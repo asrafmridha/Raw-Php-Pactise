@@ -204,7 +204,7 @@ echo $student->name;
 echo $student->age;
 
 
-class DistrtCollection implements IteratorAggregate
+class DistrtCollection implements IteratorAggregate, Countable
 {
   private $districts;
 
@@ -226,14 +226,21 @@ class DistrtCollection implements IteratorAggregate
   {
     return new ArrayIterator($this->districts);
   }
+  function count(): int
+  {
+    return count($this->districts);
+  }
 }
 
-$district = new DistrtCollection();
-$district->addDistrict("Bogura");
-$district->addDistrict("Rajbari");
-$district->addDistrict("Kushtia");
+$districts = new DistrtCollection();
+$districts->addDistrict("Bogura");
+$districts->addDistrict("Rajbari");
+$districts->addDistrict("Kushtia");
+
 
 // $allDistrict = $district->allDistrict();
-foreach ($district as $district) {
+foreach ($districts as $district) {
   echo $district . PHP_EOL;
 }
+
+echo count($districts);
