@@ -23,10 +23,16 @@ $students = [
         'roll' => 4
     ]
 ];
-$fp = fopen($fileName, "w");
-foreach ($students as $student) {
-    //data Save in File
-    $data = sprintf("%s,%s,%s,%s,%s\n", $student['fname'], $student['lname'], $student['age'], $student['class'], $student['roll']);
-    fwrite($fp, $data) . PHP_EOL;
+// $fp = fopen($fileName, "w");
+// foreach ($students as $student) {
+//     //data Save in File
+//     $data = sprintf("%s,%s,%s,%s,%s\n", $student['fname'], $student['lname'], $student['age'], $student['class'], $student['roll']);
+//     fwrite($fp, $data) . PHP_EOL;
+// }
+// fclose($fp);
+
+$fp = fopen($fileName, "r");
+while ($student = fgetcsv($fp)) {
+
+    printf("Name=%s %s Age=%s Class=%s Roll=%s \n", $student[0], $student[1], $student[2], $student[3] ,$student[4] );
 }
-fclose($fp);
