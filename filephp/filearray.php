@@ -31,8 +31,21 @@ $students = [
 // }
 // fclose($fp);
 
-$fp = fopen($fileName, "r");
-while ($student = fgetcsv($fp)) {
+// $fp = fopen($fileName, "r");
+// while ($student = fgetcsv($fp)) {
 
-    printf("Name=%s %s Age=%s Class=%s Roll=%s \n", $student[0], $student[1], $student[2], $student[3] ,$student[4] );
-}
+//     printf("Name=%s %s Age=%s Class=%s Roll=%s \n", $student[0], $student[1], $student[2], $student[3] ,$student[4] );
+// }
+
+//Add New Array data in file 
+// $fp means file pointer 
+$fp = fopen($fileName, "a");
+$student = [
+    'fname' => "Sadruka",
+    'lname' => "Sadu",
+    'age'  => "22",
+    'class' => 9,
+    'roll' => 4
+];
+fputcsv($fp, $student);
+fclose($fp);
