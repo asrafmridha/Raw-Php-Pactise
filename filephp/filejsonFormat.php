@@ -24,5 +24,10 @@ $students = [
 ];
 
 // json format save data in  file 
-$jsonData = json_encode($students);
-file_put_contents($fileName,$jsonData);
+// $jsonData = json_encode($students);
+// file_put_contents($fileName,$jsonData);
+
+// json format Show data in  file 
+$data = file_get_contents($fileName);
+$allStudents = json_decode($data,true);
+print_r($allStudents);

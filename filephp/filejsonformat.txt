@@ -1,1 +1,1 @@
-var data = [{"fname":"Asraf","lname":"Mridha","age":"24","class":7,"roll":1},{"fname":"Tahmina","lname":"Toma","age":"22","class":5,"roll":3},{"fname":"Priyanka","lname":"Priya","age":"22","class":5,"roll":4}]
+[{"fname":"Asraf","lname":"Mridha","age":"24","class":7,"roll":1},{"fname":"Tahmina","lname":"Toma","age":"22","class":5,"roll":3},{"fname":"Priyanka","lname":"Priya","age":"22","class":5,"roll":4}]
