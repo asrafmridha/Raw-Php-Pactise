@@ -5,16 +5,18 @@ interface BaseStudent
     public function displayName();
 }
 
-class Student implements BaseStudent
+class ImproveStudent implements BaseStudent
 {
     private $name;
-    function __construct($name)
+    private $title;
+    function __construct($name,$title)
     {
         $this->name = $name;
+        $this->title = $title;
     }
     public function displayName()
     {
-        echo "Hello From" . " " . $this->name;
+        echo "Hello From". " " . $this->title." " . $this->name;
     }
 }
 
@@ -30,13 +32,15 @@ class Student implements BaseStudent
 
 class StudentManager
 {
-    function introductStudent($student)
+    function introductStudent(BaseStudent $student)
     {
         $student->displayName();
     }
 }
 
-$st = new Student("Tahmina Toma");
+// $st = new Student("Tahmina Toma");
 $sm = new StudentManager();
+$ist=new ImproveStudent('Tahmina Toma','Ms');
 //Pass Object
-$sm->introductStudent($st);
+$d = new dateTime();
+$sm->introductStudent($ist);
