@@ -247,8 +247,8 @@ echo count($districts);
 echo PHP_EOL;
 class Rectangle
 {
-  // এই কোডটা পিএচপি ৮.০ থেকে কাজ করবে এখানে নতুন করে পাব্লিক প্রাইভেট লেখার ঝামেলা নাই সরাসরি এক্সেস করা যাবে
-  function __construct(public $height, public $weight) //Property Promotion
+  // এই কোডটা পিএচপি ৮.০ থেকে কাজ করবে এখানে নতুন করে পাব্লিক প্রাইভেট লেখার ঝামেলা নাই সরাসরি এক্সেস করা যাবে...
+  function __construct(public $height =10, public $weight=4 ) //Property Promotion //ডিফল্ট ভ্যালুও সেট করা যাবে...
   {
   }
 
