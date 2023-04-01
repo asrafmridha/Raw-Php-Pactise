@@ -244,3 +244,19 @@ foreach ($districts as $district) {
 }
 
 echo count($districts);
+echo PHP_EOL;
+class Rectangle
+{
+  // এই কোডটা পিএচপি ৮.০ থেকে কাজ করবে এখানে নতুন করে পাব্লিক প্রাইভেট লেখার ঝামেলা নাই সরাসরি এক্সেস করা যাবে
+  function __construct(public $height, public $weight) //Property Promotion
+  {
+  }
+
+  function getArea()
+  {
+    return $this->height * $this->weight;
+  }
+}
+
+$rectangle = new Rectangle(10, 5);
+echo $rectangle->getArea();
